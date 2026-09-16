@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Game Senja Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginScreen" class="screen">
+        <div class="login-box">
+            <h1>GAME SENJA SNAKE</h1>
+            <p>Masukkan nama pemain</p>
+            <input id="nameInput" type="text" maxlength="18" placeholder="Nama kamu...">
+            <button id="startButton">MULAI GAME</button>
+            <small>Klik kotak nama lalu ketik nama kamu</small>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="game-screen hidden">
+        <div class="top-bar">
+            <span id="playerText">Pemain: </span>
+            <span id="scoreText">Skor: 0</span>
+            <span id="lengthText">Panjang: 4</span>
+            <span id="speedText">Speed: 10</span>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div id="niceText" class="nice hidden">NICE!</div>
+
+        <div id="controls">
+            <button data-direction="UP">↑</button>
+            <div>
+                <button data-direction="LEFT">←</button>
+                <button class="center-button" disabled>●</button>
+                <button data-direction="RIGHT">→</button>
+            </div>
+            <button data-direction="DOWN">↓</button>
+        </div>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>GAME OVER</h2>
+            <p id="finalScore">Skor Akhir: 0</p>
+            <button id="restartButton">MAIN LAGI</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
